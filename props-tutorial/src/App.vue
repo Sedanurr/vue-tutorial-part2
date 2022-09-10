@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <HeaderComponent />
+    <HeaderComponent :title="title"/>
     <NinjasComponent :ninjas="ninjas"/>
-    <FooterComponent />
+    <FooterComponent :title="title"/>
   </div>
 </template>
 
@@ -28,6 +28,7 @@ export default {
         { name: "Kami", speciality: "Webpack", show: false },
         { name: "Yoshi", speciality: "Data Diggin", show: false },
       ],
+      title:'Vue Ninjas'
     };
   },
 };
