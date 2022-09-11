@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>{{ copyright }} {{title}}</p>
+    <p>{{ copyright }} {{titleClone}}</p>
   </footer>
 </template>
 <script>
@@ -15,11 +15,12 @@ export default {
   data() {
     return {
       copyright: "Copyright 2022",
+      titleClone:this.title
     };
   },
   created() {
     bus.$on("titleChanged", (data) => {
-      this.title= data;
+      this.titleClone= data;
     });
   },
 };

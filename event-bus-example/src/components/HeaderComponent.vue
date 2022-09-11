@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1 v-on:click="changeTitle">{{ title }}</h1>
+    <h1 v-on:click="changeTitle">{{ titleClone }}</h1>
   </header>
 </template>
 <script>
@@ -14,12 +14,13 @@ export default {
   data() {
     return {
       titlePri: "vue ninja",
+      titleClone: this.title
     };
   },
   methods: {
     changeTitle: function () {
       // this.$emit("changeTitle", "Vue Wizards");
-      this.title = 'Vue Wizards' 
+      this.titleClone = 'Vue Wizards' 
       bus.$emit('titleChanged','Vue Wizards')
     },
   },
