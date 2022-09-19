@@ -49,7 +49,7 @@ export default {
   methods: {
     post: function () {
       this.$http
-        .post("https://nn-vue-playlist.firebaseio.com/posts.json", this.blog)
+        .post("https://vue2-tutorial-33701-default-rtdb.firebaseio.com/posts.json", this.blog)
         .then(function (data) {
           console.log(data);
           this.submitted = true;
